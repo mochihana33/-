@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>何食べる？</title>
+        <style>
+          div{background-color: rgb(255, 128, 0);}
+          
+          big-button {font-size: 20px;padding: auto;border-radius: 5px; background-color: greenyellow;}
+          body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: antiquewhite;
+            background-image: url(web背景.jpg);
+            background-size: 100%;
+            background-position: center;
+          }
+          p{
+            font-size: 27px;
+            margin: 20px auto 20px auto;
+          }
+          footer{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+          }
+        </style> 
+    </head>
+    <body>
+      <div>
+        <header>
+          <h1>🐟何、食べる？🍖</h1>
+        </header>
+        <main>
+          <p>↓迷ったら押してみて↓</p>
+        </main>
+      </div>
+      <p>
+        <big-button onclick="menu();">メニューを決める</big-button>
+      </p>
+      <p id="output1">結果</p>
+      <script>
+        var kekka = document.getElementById("output1");
+        function menu(){
+          var menu=Math.floor(Math.random()*5);
+          if(menu===0){
+            kekka.innerHTML="スペシャルメニュー！";
+          }else if(menu===1){
+            kekka.innerHTML="和定食！";
+          }else if(menu===2){
+            kekka.innerHTML="ペスカトーレ！";
+          }else if(menu===3){
+            kekka.innerHTML="ピザセット！";
+          }else if(menu===4){
+            kekka.innerHTML="洋風汁粉！";
+          }
+        }
+      </script>
+      <footer>
+            <small>&copy; Ueki Midori.</small>
+      </footer>  
+    </body>
+</html>
